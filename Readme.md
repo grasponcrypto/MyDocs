@@ -21,3 +21,12 @@ rm besu-[2 versions ago] #keeping previous version for easier rollback
 sudo systemctl restart besu
 tail -f /var/log/besu.log
 ````
+
+RocketPool
+````
+./rocketpool-stop-instances.sh
+wget https://github.com/rocket-pool/smartnode-install/releases/latest/download/rocketpool-cli-linux-amd64 -O ~/bin/rocketpool
+vi ~/.rocketpoolMe/user-settings.yml #update the teku version accordingly
+./rocketpool-start-instances.sh
+rocketpoolMe s v #confirm versions are good
+````
